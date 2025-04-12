@@ -16,17 +16,17 @@ st.title("Salary Prediction App")
 # Streamlit Inputs for all 5 features
 education = st.selectbox("Education Level", ["Bachelor", "Master", "PhD"])
 experience = st.slider("Years of Experience", 0, 30, 5)
-location = st.selectbox("Gender", ["Male", "Female"])
+gender = st.selectbox("Gender", ["Male", "Female"])
 role = st.selectbox("Role", ["Developer", "Manager", "Analyst"])
 age = st.slider("Age", 20, 60, 25)
 
 # Encode inputs (matching training feature encoding)
 education_encoded = {"Bachelor": 0, "Master": 1, "PhD": 2}[education]
-location_encoded = {"Delhi": 0, "Mumbai": 1, "Bangalore": 2}[location]
+gender_encoded = {"Male": 0, "Female": 1}[location]
 role_encoded = {"Developer": 0, "Manager": 1, "Analyst": 2}[role]
 
 # Combine all inputs in a single array (make sure the order matches training)
-features = np.array([[education_encoded, experience, location_encoded, role_encoded, age]])
+features = np.array([[education_encoded, experience, gender_encoded, role_encoded, age]])
 
 # Scale the features (must match the number of features used during training)
 features_scaled = scaler.transform(features)
