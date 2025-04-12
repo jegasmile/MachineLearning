@@ -17,13 +17,13 @@ st.title("Salary Prediction App")
 education = st.selectbox("Education Level", ["Bachelor", "Master", "PhD"])
 experience = st.slider("Years of Experience", 0, 30, 5)
 gender = st.selectbox("Gender", ["Male", "Female"])
-role = st.selectbox("Role", ["Developer", "Manager", "Analyst"])
+role = st.selectbox("Job Title", ["Software Engineer", "Senior Manager", "Data Analyst", "Sales Associate"])
 age = st.slider("Age", 20, 60, 25)
 
 # Encode inputs (matching training feature encoding)
 education_encoded = {"Bachelor": 0, "Master": 1, "PhD": 2}[education]
 gender_encoded = {"Male": 0, "Female": 1}[gender]
-role_encoded = {"Developer": 0, "Manager": 1, "Analyst": 2}[role]
+role_encoded = {"Software Engineer": 0, "Senior Manager": 1, "Data Analyst": 2, "Sales Associate":3}[role]
 
 # Combine all inputs in a single array (make sure the order matches training)
 features = np.array([[education_encoded, experience, gender_encoded, role_encoded, age]])
