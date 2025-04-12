@@ -4,5 +4,5 @@ matplotlib
 google
 drive
 seaborn
-sklearn
+scikit-learn
 pickle
