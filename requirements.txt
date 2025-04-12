@@ -5,3 +5,4 @@ google
 drive
 seaborn
 scikit-learn
+streamlit
