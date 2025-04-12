@@ -22,7 +22,7 @@ age = st.slider("Age", 20, 60, 25)
 
 # Encode inputs (matching training feature encoding)
 education_encoded = {"Bachelor": 0, "Master": 1, "PhD": 2}[education]
-gender_encoded = {"Male": 0, "Female": 1}[location]
+gender_encoded = {"Male": 0, "Female": 1}[gender]
 role_encoded = {"Developer": 0, "Manager": 1, "Analyst": 2}[role]
 
 # Combine all inputs in a single array (make sure the order matches training)
