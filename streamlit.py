@@ -1,11 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-from google.colab import drive
 
-
-# Mount Google Drive
-drive.mount('/content/drive')
 
 model_path = "model.pkl"
 scaler_path = "scaler.pkl"
